@@ -38,13 +38,15 @@
 
 
 <script>
-async function login(){
+const API = "https://contactbook-hybp.onrender.com";
 
-    try{
-
-        const res = await fetch("http://localhost:5000/api/auth/login", {
+async function login() {
+    try {
+        const res = await fetch(`${API}/api/auth/login`, {
             method: "POST",
-            headers: {"Content-Type":"application/json"},
+            headers: {
+                "Content-Type": "application/json"
+            },
             body: JSON.stringify({
                 email: document.getElementById("email").value,
                 password: document.getElementById("password").value
@@ -53,25 +55,22 @@ async function login(){
 
         const text = await res.text();
 
-        console.log("Response:", text);
-
-        try{
+        try {
             const data = JSON.parse(text);
 
-            if(data.userId){
+            if (data.userId) {
                 localStorage.setItem("userId", data.userId);
                 window.location.href = "dashboard.html";
             } else {
                 alert(text);
             }
-
         } catch {
-            alert(text); // shows backend error properly
+            alert(text);
         }
 
-    } catch(err){
+    } catch (err) {
         console.error(err);
-        alert("Cannot connect to backend. Make sure server is running.");
+        alert("Cannot connect to backend.");
     }
 }
 </script>
