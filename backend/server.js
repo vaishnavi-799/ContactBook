@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const path = require("path");
 require("dotenv").config();
 
 const authRoutes = require("./routes/auth");
@@ -20,9 +21,11 @@ mongoose.connect(process.env.MONGO_URI)
 app.use("/api/auth", authRoutes);
 app.use("/api/contacts", contactRoutes);
 
-// 👇 Add this here
+// Serve frontend
+app.use(express.static(path.join(__dirname, "../frontend")));
+
 app.get("/", (req, res) => {
-    res.send("ContactBook API is running 🚀");
+    res.sendFile(path.join(__dirname, "../frontend/index.html"));
 });
 
 app.listen(PORT, () => {
