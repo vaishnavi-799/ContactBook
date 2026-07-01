@@ -70,9 +70,7 @@ Server runs at:
 http://localhost:5000
 ```
 
-###  Run Frontend
 
-* Open `frontend/index.html` using **Live Server** in VS Code
 
 ---
 
@@ -91,7 +89,7 @@ http://localhost:5000
 * `GET /api/contacts/search/:userId/:key` → Search contacts
 
 ---
-## 🔗 Live Demo
+## view project
 
 Frontend & Backend:
 https://contactbook-hybp.onrender.com
