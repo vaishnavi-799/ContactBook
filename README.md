@@ -4,38 +4,11 @@ A full-stack **Contact Management System** built using **HTML, Bootstrap, JavaSc
 
 This project allows users to **register, login, and manage personal contacts** with features like add, search, and delete — all stored securely per user.
 
----
+Tech Stack: HTML,CSS,JavaScript,Node.js,Express.js,MongoDB (Mongoose)
 
-## Features
-
-*  User Authentication (Register & Login)
-*  Add Contacts (Name, Phone, Category)
-*  Search Contacts (User-specific)
-*  Delete Contacts
-*  Categories (Family, Friends, Work)
-*  User-based Data Isolation (Each user sees only their contacts)
-*  Clean Mobile-style UI
 
 ---
 
-##  Tech Stack
-
-**Frontend**
-
-* HTML5
-* Bootstrap 5
-* JavaScript
-
-**Backend**
-
-* Node.js
-* Express.js
-
-**Database**
-
-* MongoDB (Mongoose)
-
----
 
 ##  Project Structure
 
@@ -119,38 +92,5 @@ http://localhost:5000
 
 ---
 
-## Usage Flow
-
-1. Register user (via API or UI)
-2. Login with credentials
-3. Add contacts using ➕ button
-4. View contacts list
-5. Search contacts
-6. Delete contacts
-
----
-
-## Notes
-
-* This project uses a basic JWT setup for learning purposes
-* MongoDB runs locally (`mongodb://127.0.0.1:27017/contactbook`)
-* No environment variables used (can be added for production)
-
----
-
-## Future Improvements
-
-* ✏️ Edit Contact Feature
-* 🔐 Protected Routes with Middleware
-* 📧 Store User Email with Contacts
-* 🌐 Deploy using Render / Vercel
-* ⚛️ Convert to React (MERN Stack)
-
----
 
 
-![Registration](Screenshort/Register.jpeg)
-![Login](Screenshort/Login.jpeg)
-![Dashboard](Screenshort/DashBoard.jpeg)
-
----
