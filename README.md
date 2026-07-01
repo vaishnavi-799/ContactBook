@@ -91,7 +91,7 @@ http://localhost:5000
 ---
 ## view project
 
-Frontend & Backend:
+Explore:
 https://contactbook-hybp.onrender.com
 
 ---
